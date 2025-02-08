@@ -19,6 +19,9 @@ python -m venv venv
 call test\Scripts\activate
 pip install -r requirements.txt
 ```
+2. Create .env file inside frontend folders
+3. Inside .env file add api url, needs to start with `REACT_APP`
+
 ### **3️⃣ Run the Project**
 #### **Windows:**
 1. Run batch script "run.bat
