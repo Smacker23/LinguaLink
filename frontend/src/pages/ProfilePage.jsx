@@ -4,6 +4,7 @@ import { fetchData } from "../components/Api";
 import LoadingScreen from "../components/LoadingScreen.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
 import { useAuth } from "../components/AuthContext.js";
+import Navbar from "../components/Navbar.jsx";
 import "../assets/css/Profile.css";
 function ProfilePage() {
     const { user } = useAuth();
@@ -44,6 +45,7 @@ function ProfilePage() {
     console.log(profile)
     return (
         <div>
+            <Navbar />
             <h1>Profile Page</h1>
             <p> {profile.profilename}</p>
             <p> {profile.firstName} {profile.lastName}</p>

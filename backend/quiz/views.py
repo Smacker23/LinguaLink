@@ -71,3 +71,11 @@ def get_quiz(quiz):
         'tags': [tag.name for tag in quiz.tags.all()],
         'questions': questions
     } 
+
+
+def delete_quiz(owner, quiz):
+    quiz = Quiz.objects.filter(name=quiz, quiz_owner=owner).first()
+    if quiz is None:
+        return JsonResponse({'error': 'Quiz does not exist'}, status=400)
+    quiz.delete()
+    return JsonResponse({'message': 'Quiz deleted'}, status=200)

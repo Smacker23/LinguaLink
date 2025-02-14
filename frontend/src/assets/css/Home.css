@@ -26,3 +26,18 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+
+.content-container {
+    height: 100%;
+    width: calc(100% - 200px);
+    background-color: beige;
+    margin-left: 200px;
+}
+
+
+.deck-wrapper {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+}
