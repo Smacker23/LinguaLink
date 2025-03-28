@@ -15,9 +15,9 @@ const Navbar = ({ full = true }) => {
       {full && (
         <>
           <h1 onClick={() => navigate("/my-decks")} className="link">My decks</h1>
-          <h1>Community decks</h1>
+         <h1 onClick={() => navigate("/communuty")} className="link">Community decks</h1>
           <h1>Profile</h1>
-          <h1>{user ? `Welcome, ${user.username}` : "HEY SHORTY"}</h1>
+          <h1>{user ? `Welcome, ${user.username}` : "Welcome Guest"}</h1>
           {isAuthenticated && <h1 onClick={logout} className="link">Logout</h1>}
           {!isAuthenticated &&
             <>
