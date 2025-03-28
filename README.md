@@ -1,37 +1,48 @@
-# LinguaLink
 A Django and React-based website designed to assist with language learning. It utilizes a flashcard system to help users effectively memorize vocabulary and key concepts.
 
-### **1️⃣ Prerequisites**
+1️⃣ Prerequisites
 Ensure you have the following installed on your system:
-- [Python 3](https://www.python.org/downloads/)
-- [Node.js & npm](https://nodejs.org/en/)
-- Git (optional)
 
-### **2️⃣ Setting Up the Project**
+Python 3
+
+Node.js & npm
+
+Git (optional)
+
+2️⃣ Setting Up the Project
 You can easily set up the project by running the provided script:
 
-#### **Windows:**
-1. Run batch script "setup_django.bat
-```batch
+Windows:
+Run the batch script setup_django.bat:
+
+batch
+Copy
+Edit
 @echo off
 cd /d "backend"
 python -m venv venv
-call test\Scripts\activate
+call venv\Scripts\activate
 pip install -r requirements.txt
-```
-2. Create .env file inside frontend folders
-3. Inside .env file add api url, needs to start with `REACT_APP`
+Create a .env file inside the frontend folder.
 
-### **3️⃣ Run the Project**
-#### **Windows:**
-1. Run batch script "run.bat
-```batch
+Inside the .env file, define the base API URL variable as:
+
+ini
+Copy
+Edit
+REACT_APP_BASE_API_URL=<your_api_url>
+Open backend/lingualink/settings.py and configure your database settings.
+
+3️⃣ Running the Project
+Windows:
+Run the batch script run.bat:
+
+batch
+Copy
+Edit
 @echo off
 cd /d "backend"
 start cmd /k "venv\Scripts\activate && python manage.py runserver"
 
-
 cd /d "../frontend"
 start cmd /k "npm start"
-
-```
