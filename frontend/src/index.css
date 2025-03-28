@@ -9,11 +9,12 @@ html, body {
 
 
 body {
-  --background-color-1: #100930;
-    --background-color-2: #170F3D;
-    --background-color-3: #2D2066;
-    background: -webkit-radial-gradient(top right,var(--background-color-3),var(--background-color-2) 50%,var(--background-color-1));
-    background: radial-gradient(at top right,var(--background-color-3),var(--background-color-1) 50%,var(--background-color-1));  
+  color: white;
+  --background-color-1: #212121;
+  --background-color-2: #170f3d;
+  --background-color-3: #424242;
+  background: -webkit-radial-gradient(top right,var(--background-color-3),var(--background-color-2) 50%,var(--background-color-1));
+  background: radial-gradient(at top right,var(--background-color-3),var(--background-color-1) 50%,var(--background-color-1));  
 }
 
 code {
