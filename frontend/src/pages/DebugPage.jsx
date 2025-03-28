@@ -39,7 +39,7 @@ function HomePage() {
 
   return (
     <div>
-       <h1>{user ? `Welcome, ${user.username}` : "HEY SHORTY"}</h1> 
+       <h1>{user ? `Welcome, ${user.username}` : "HEY Welcome Guest"}</h1> 
       <button
         style={{ width: "100px", height: "100px", backgroundColor: "#4CAF50", color: "white", border: "none", borderRadius: "8px" }}
         onClick={get_user_button}
