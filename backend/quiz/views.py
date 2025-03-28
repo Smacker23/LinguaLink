@@ -33,7 +33,6 @@ def create_quiz(owner, quiz):
             print(tag)
             question[0].tags.add(tag[0])
         quiz.questions.add(question[0])
-    print("final_boss")
     return JsonResponse({'message': 'Quiz created'}, status=200)
     
 
