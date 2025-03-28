@@ -12,29 +12,29 @@ You can easily set up the project by running the provided script:
 
 #### **Windows:**
 1. Run batch script "setup_django.bat"
-batch
+```batch
 @echo off
 cd /d "backend"
 python -m venv venv
 call venv\Scripts\activate
 pip install -r requirements.txt
-
+```
 2. Create .env file inside frontend folder
 3. Inside the .env file, define the base API URL variable as:
-batch
+```batch
 REACT_APP_BASE_API_URL=<your_api_url>
-
+```
 4. Open backend/lingualink/settings.py and configure your database settings.
 
    
 ### **3️⃣ Run the Project**
 #### **Windows:**
 1. Run batch script "run.bat"
-batch
+```batch
 @echo off
 cd /d "backend"
 start cmd /k "venv\Scripts\activate && python manage.py runserver"
 
-
 cd /d "../frontend"
 start cmd /k "npm start"
+```
