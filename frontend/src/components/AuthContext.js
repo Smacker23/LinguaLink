@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
         console.log("Checking user authentication...");
         setLoading(true);
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/get_user", {
+            const response = await fetch(`${process.env.REACT_APP_BASE_API_URL}get_user`, {
                 method: "GET",
                 credentials: "include",
             });
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
         console.log("Logging in...");
         setLoading(true);
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/login", {
+            const response = await fetch(`${process.env.REACT_APP_BASE_API_URL}login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password, rememberMe }),
@@ -71,7 +71,7 @@ export const AuthProvider = ({ children }) => {
         console.log("Logging out...");
         setLoading(true);
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/logout", {
+            const response = await fetch(`${process.env.REACT_APP_BASE_API_URL}logout`, {
                 method: "GET",
                 credentials: "include",
             });
