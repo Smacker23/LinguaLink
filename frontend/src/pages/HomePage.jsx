@@ -64,7 +64,7 @@ function HomePage() {
 
   const get_profile = async (e) => {
     const quiz = 'New Deck911'
-    const url = `http://127.0.0.1:8000/api/profile`;
+    const url = `${process.env.REACT_APP_BASE_API_URL}profile`;
     try {
       const response = await fetch(url, {
         method: "GET",
